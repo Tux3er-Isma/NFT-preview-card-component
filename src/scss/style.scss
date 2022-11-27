@@ -1,1 +1,24 @@
+/*SCSS Files*/
+@use 'variables';
+@use 'main';
 
+/*General Styles*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: variables.$main-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr{
+    border: .5px solid variables.$line-color;
+    width: 300px;
+    margin: 20px  auto;
+}

@@ -1,1 +1,167 @@
+/*SCSS Files*/
+@use 'variables';
 
+/*Main Styles*/
+.main{
+
+    .main__card{
+        display: inline-block;
+        background-color: variables.$card-bg;
+        width: 350px;
+        border-radius: 10px;
+
+        .main__card__thumbnail-container{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+
+            &:hover{
+
+                .main__card__thumbnail-container__eye-container{
+                    animation: eye-container 1s forwards;
+                    cursor: pointer;
+                }
+
+                .main__card__thumbnail-container__eye-container__eye{
+                    animation: eye 1.5s forwards;
+                }
+            }
+
+            .main__card__thumbnail-container__thumbnail{
+                width: 300px;
+                height: 300px;
+                border-radius: 10px;
+            }
+
+            .main__card__thumbnail-container__eye-container{
+                width: 50px;
+                height: 50px;
+                background-color: variables.$cyan;
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @keyframes eye-container{
+                    0%{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        opacity: 0;
+                    }
+
+                    100%{
+                        width: 300px;
+                        height: 300px;
+                        border-radius: 10px;
+                        opacity: .5;
+                    }
+                }
+            }
+
+            .main__card__thumbnail-container__eye-container__eye{
+                opacity: 1;
+                position: absolute;
+                align-self: center;
+                opacity: 0;
+
+                @keyframes eye{
+                    0%{
+                        opacity: 0;
+                    }
+
+                    100%{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .main__card__information-container{
+            margin-left: 30px;
+            margin-top: 20px;
+
+            .main__card__information-container__title{
+                color: #fff;
+                font-family: variables.$outfit;
+                font-size: 20px;
+                margin-bottom: 7.5px;
+
+                &:hover{
+                    cursor: pointer;
+                    color: variables.$cyan;
+                }
+            }
+
+            .main__card__information-container__text{
+                font-family: variables.$outfit;
+                color: variables.$soft-blue;
+                font-weight: 100;
+                font-size: 11px;
+            }
+
+            .main__card__information-container__nft-information{
+                display: flex;
+                width: 280px;
+                justify-content: space-between;
+                margin-top: 20px;
+
+
+                .main__card__information-container__nft-information__price{
+                    color: variables.$cyan;
+                    font-family: variables.$outfit;
+                    font-size: 13px;
+
+                    .main__card__information-container__nft-information__etherum-price{
+                        position: relative;
+                        top: 3px;
+                    }
+                }
+
+                .main__card__information-container__nft-information__days-left{
+                    color: variables.$soft-blue;
+                    font-family: variables.$outfit;
+                    font-size: 13px;
+
+                    .main__card__information-container__nft-information__clock{
+                        position: relative;
+                        top: 3px;
+                    }
+                }
+            }
+        }
+
+        .main__card__creator{
+            display: flex;
+            width: 280px;
+            padding-bottom: 20px;
+
+            .main__card__creator__avatar{
+                width: 25px;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                margin-left: 25px;
+            }
+
+            .main__card__creator__information{
+                color: variables.$soft-blue;
+                font-family: variables.$outfit;
+                font-size: 13px;
+                position: relative;
+                top: 3px;
+                left: 17px;
+
+                .main__card__creator__information__name{
+                    color: #fff;
+
+                    &:hover{
+                        cursor: pointer;
+                        color: variables.$cyan;
+                    }
+                }
+            }
+        }
+    }
+}

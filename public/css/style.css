@@ -1,1 +1,161 @@
+/*Variables*/
+/*Color Variables*/
+/*Font Variables*/
+/*SCSS Files*/
+/*Main Styles*/
+.main .main__card {
+  display: inline-block;
+  background-color: hsl(216deg, 50%, 16%);
+  width: 350px;
+  border-radius: 10px;
+}
+.main .main__card .main__card__thumbnail-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.main .main__card .main__card__thumbnail-container:hover .main__card__thumbnail-container__eye-container {
+  animation: eye-container 1s forwards;
+  cursor: pointer;
+}
+.main .main__card .main__card__thumbnail-container:hover .main__card__thumbnail-container__eye-container__eye {
+  animation: eye 1.5s forwards;
+}
+.main .main__card .main__card__thumbnail-container .main__card__thumbnail-container__thumbnail {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+.main .main__card .main__card__thumbnail-container .main__card__thumbnail-container__eye-container {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(178deg, 100%, 50%);
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes eye-container {
+  0% {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    opacity: 0.5;
+  }
+}
+.main .main__card .main__card__thumbnail-container .main__card__thumbnail-container__eye-container__eye {
+  opacity: 1;
+  position: absolute;
+  align-self: center;
+  opacity: 0;
+}
+@keyframes eye {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main .main__card .main__card__information-container {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.main .main__card .main__card__information-container .main__card__information-container__title {
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  margin-bottom: 7.5px;
+}
+.main .main__card .main__card__information-container .main__card__information-container__title:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
+}
+.main .main__card .main__card__information-container .main__card__information-container__text {
+  font-family: "Outfit", sans-serif;
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 100;
+  font-size: 11px;
+}
+.main .main__card .main__card__information-container .main__card__information-container__nft-information {
+  display: flex;
+  width: 280px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.main .main__card .main__card__information-container .main__card__information-container__nft-information .main__card__information-container__nft-information__price {
+  color: hsl(178deg, 100%, 50%);
+  font-family: "Outfit", sans-serif;
+  font-size: 13px;
+}
+.main .main__card .main__card__information-container .main__card__information-container__nft-information .main__card__information-container__nft-information__price .main__card__information-container__nft-information__etherum-price {
+  position: relative;
+  top: 3px;
+}
+.main .main__card .main__card__information-container .main__card__information-container__nft-information .main__card__information-container__nft-information__days-left {
+  color: hsl(215deg, 51%, 70%);
+  font-family: "Outfit", sans-serif;
+  font-size: 13px;
+}
+.main .main__card .main__card__information-container .main__card__information-container__nft-information .main__card__information-container__nft-information__days-left .main__card__information-container__nft-information__clock {
+  position: relative;
+  top: 3px;
+}
+.main .main__card .main__card__creator {
+  display: flex;
+  width: 280px;
+  padding-bottom: 20px;
+}
+.main .main__card .main__card__creator .main__card__creator__avatar {
+  width: 25px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-left: 25px;
+}
+.main .main__card .main__card__creator .main__card__creator__information {
+  color: hsl(215deg, 51%, 70%);
+  font-family: "Outfit", sans-serif;
+  font-size: 13px;
+  position: relative;
+  top: 3px;
+  left: 17px;
+}
+.main .main__card .main__card__creator .main__card__creator__information .main__card__creator__information__name {
+  color: #fff;
+}
+.main .main__card .main__card__creator .main__card__creator__information .main__card__creator__information__name:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
+}
 
+/*SCSS Files*/
+/*General Styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(217deg, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: 0.5px solid hsl(215deg, 32%, 27%);
+  width: 300px;
+  margin: 20px auto;
+}
+
+/*# sourceMappingURL=style.css.map */
